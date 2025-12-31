@@ -8,20 +8,8 @@
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
   </head>
   <body>
-    <model-viewer 
-      src="V1.glb" 
-      ar 
-      ar-modes="webxr scene-viewer quick-look" 
-      camera-controls 
-      disable-zoom 
-      ar-scale="fixed"
-      tone-mapping="aces" 
-      poster="poster.webp" 
-      shadow-intensity="0.1" 
-      autoplay 
-      environment-image="brown_photostudio_04_4k.hdr" 
-      exposure="1">
-
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="V1.glb" ar ar-modes="brown_photostudio_04_4k.hdr" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.33" exposure="2" shadow-softness="1" environment-image="Blurred Studio.hdr">
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -32,8 +20,8 @@
           <img src="ar_hand_prompt.png">
       </div>
     </model-viewer>  
-
     <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </body>
 </html>
